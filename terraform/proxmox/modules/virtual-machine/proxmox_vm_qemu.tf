@@ -2,6 +2,8 @@ resource "proxmox_vm_qemu" "vm" {
   #general configuration
   target_node = var.pve_target_node
 
+  additional_wait = var.additional_wait
+
   name = var.name
   vmid = var.id
 

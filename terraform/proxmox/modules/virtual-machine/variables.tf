@@ -26,6 +26,11 @@ variable "bios" {
   default = "seabios"
 }
 
+variable "additional_wait" {
+  type = number
+  default = 15
+}
+
 variable "os_config" {
   type = object({
     os = object({
