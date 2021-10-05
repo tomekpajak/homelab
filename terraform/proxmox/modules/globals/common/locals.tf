@@ -26,4 +26,8 @@ locals {
       "sdd" = "data-sdd"
     })
   }
+
+  local_config = {
+    homelab_prv = "d:/Work/Projects/homelab-prv"
+  }  
 }

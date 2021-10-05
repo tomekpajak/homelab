@@ -9,3 +9,7 @@ output "pve_info" {
 output "vm_consts" {
   value = local.vm_consts
 }
+
+output "local_config" {
+  value = local.local_config
+}
