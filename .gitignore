@@ -1,0 +1,5 @@
+terraform/backend
+.terraform/
+.terraform.*
+.env
+**/router/**/*.xml
