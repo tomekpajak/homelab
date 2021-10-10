@@ -27,7 +27,7 @@ variable "bios" {
 }
 
 variable "additional_wait" {
-  type = number
+  type    = number
   default = 15
 }
 

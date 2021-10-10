@@ -29,5 +29,5 @@ locals {
 
   local_config = {
     homelab_prv = "d:/Work/Projects/homelab-prv"
-  }  
+  }
 }

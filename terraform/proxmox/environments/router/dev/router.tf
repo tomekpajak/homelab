@@ -6,7 +6,7 @@ module "copy_config_xml" {
   source = "../../../modules/pvm-copy-folders"
 
   pve     = local.iso_cloud_config.pve
-  folders = {for idx, val in local.iso_cloud_config.folders: idx => val}
+  folders = { for idx, val in local.iso_cloud_config.folders : idx => val }
 }
 
 module "router" {

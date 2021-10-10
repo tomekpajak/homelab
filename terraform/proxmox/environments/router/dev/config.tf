@@ -72,9 +72,9 @@ locals {
     }
   }
 
-  config_name = local.vm_config.id
+  config_name   = local.vm_config.id
   config_folder = "~/${local.config_name}"
-  config_img = "${local.config_name}.img"
+  config_img    = "${local.config_name}.img"
 
   iso_cloud_config = {
     pve = {
@@ -98,5 +98,3 @@ locals {
     ]
   }
 }
-
-

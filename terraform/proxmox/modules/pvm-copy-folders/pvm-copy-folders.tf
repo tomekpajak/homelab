@@ -18,5 +18,5 @@ resource "null_resource" "pvm_copy_folders" {
   provisioner "file" {
     source      = each.value.source
     destination = each.value.target
-  }  
+  }
 }

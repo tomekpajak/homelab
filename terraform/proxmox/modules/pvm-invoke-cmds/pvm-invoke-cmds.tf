@@ -9,5 +9,5 @@ resource "null_resource" "pvm_invoke_cmds" {
 
   provisioner "remote-exec" {
     inline = var.commands
-  }    
+  }
 }
