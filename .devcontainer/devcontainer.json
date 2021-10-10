@@ -1,0 +1,43 @@
+{
+  //docker properties
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".",
+    "args": { "USERNAME": "node" }, //docker build args
+    "target": "" //docker build target
+  },
+  "containerEnv": {}, //variables that should apply to the entire container
+  "remoteEnv": {}, //variables for VS Code and related sub-processes (terminals, tasks, debugging, etc.)
+  "runArgs": ["--env-file", ".devcontainer/.env"],
+  "containerUser": "",
+  "remoteUser": "node",
+  "overrideCommand": true, //override with: /bin/sh -c "while sleep 1000; do :; done"
+  "shutdownAction": "stopContainer",
+  "mounts": ["source=homelab-shellhistory,target=/commandhistory,type=volume"],
+
+  //general properties
+  "name": "homelab",
+  "settings": {
+    "terminal.integrated.defaultProfile.linux": "zsh"
+  }, //settings.json inside a container
+
+  "initializeCommand": "echo 'initializeCommand'",
+  "onCreateCommand": "echo 'onCreateCommand'",
+  "updateContentCommand": "echo 'updateContentCommand'",
+  "postCreateCommand": "echo 'postCreateCommand'",
+  "postStartCommand": "sudo chmod 700 ~/my-dot-files/install.sh && cd ~/my-dot-files && ./install.sh",
+  "postAttachCommand": "echo 'postAttachCommand'",
+  "extensions": [
+    "editorconfig.editorconfig",
+    "dbaeumer.vscode-eslint",
+    "wmaurer.change-case",
+    "eamodio.gitlens",
+    "hashicorp.terraform",
+    "oderwat.indent-rainbow",
+    "christian-kohler.path-intellisense",
+    "esbenp.prettier-vscode",
+    "alefragnani.project-manager",
+    "cnojima.readable-indent",
+    "redhat.vscode-yaml"
+  ]
+}
