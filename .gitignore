@@ -3,3 +3,4 @@ terraform/backend
 .terraform.*
 .env
 **/router/**/*.xml
+.pnpm-debug.log
