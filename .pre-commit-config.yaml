@@ -12,3 +12,14 @@ repos:
         args:
           - "--fix=lf"
       - id: trailing-whitespace
+  - repo: https://github.com/jameswoolfenden/pre-commit-shell
+    rev: 0.0.2
+    hooks:
+      - id: shell-lint
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.52.0
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_validate
+# terraform_tflint - Validates all Terraform configuration files with TFLint.
+# tflint - TFLint is a Terraform linter focused on possible errors, best practices, and so on.
